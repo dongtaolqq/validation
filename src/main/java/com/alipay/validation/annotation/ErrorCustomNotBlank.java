@@ -11,6 +11,12 @@ import org.springmodules.validation.bean.rule.NotBlankValidationRule;
 
 import com.alipay.validation.errcode.ErrorCodeProviderEnum;
 
+/**
+ * 这是NotBlank的一个升级版，可以动态指定此规则的错误校验码.<br>
+ * 需要提供一个ErrorCodeProvider实例
+ * @author wb-dongtao
+ * @version $Id: ErrorCustomNotBlank.java, v 0.1 2015-3-3 下午1:41:23 wb-dongtao Exp $
+ */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ ElementType.METHOD, ElementType.FIELD })

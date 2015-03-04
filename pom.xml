@@ -74,5 +74,13 @@
             </configuration>
         </plugin>
     </plugins>
-</build>
+  </build>
+  
+  <repositories>
+  	<repository>
+  		<id>CN</id>
+  		<name>OSChina Central</name>
+  		<url>http://maven.oschina.net/content/groups/public/</url>
+  	</repository>
+  </repositories>
 </project>

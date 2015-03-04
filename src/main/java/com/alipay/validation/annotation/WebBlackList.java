@@ -10,6 +10,12 @@ import org.springmodules.validation.bean.conf.loader.annotation.handler.Validati
 
 import com.alipay.validation.rule.WebBlackListValidationRule;
 
+/**
+ * 此注解需要提供ICheckService实例在spring容器中的beanName<br>
+ * 注解校验器会使用指定的ICheckService实例进行字段值的校验
+ * @author wb-dongtao
+ * @version $Id: WebBlackList.java, v 0.1 2015-3-3 下午1:38:57 wb-dongtao Exp $
+ */
 @Documented
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ ElementType.METHOD, ElementType.FIELD })
@@ -44,7 +50,7 @@ public @interface WebBlackList {
     String[] contexts() default {};
 
     /**
-     * 会在spring容器中取寻找id为指定值的bean
+     * ICheckService实例在spring容器中的名字
      */
     String checkServiceName();
 }
